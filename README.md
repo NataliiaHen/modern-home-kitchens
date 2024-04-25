@@ -16,7 +16,7 @@ MHK provides a unique platform for designing and ordering bespoke, handmade kitc
 - Tablet
 - Mobile
 
-[Explore MHK](https://nataliiahen.github.io/phone-catalog/) - Click here to visit Modern Home Kitchens.
+[Explore MHK](https://nataliiahen.github.io/modern-home-kitchens/) - Click here to visit Modern Home Kitchens.
 
 ## Additional Launch Instructions
 
