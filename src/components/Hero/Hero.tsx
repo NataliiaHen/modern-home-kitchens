@@ -13,7 +13,9 @@ export const HeroSection = () => {
           Crafted with Care: Quality Every Step of the Way
         </p>
         <h2 className="hero__title">
-          Embrace the Beauty of Craftsmanship in Your Kitchen
+          Embrace the Beauty of Craftsmanship
+          <br />
+          in Your Kitchen
         </h2>
         <p className="hero__text">
           Experience the luxury of a bespoke, handmade kitchen tailored to your

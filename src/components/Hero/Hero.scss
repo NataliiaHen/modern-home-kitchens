@@ -33,6 +33,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     padding: 50px 60px;
     grid-column: span 2;
@@ -43,6 +44,7 @@
       grid-column: span 1;
       padding: 0;
       padding-right: 30px;
+      text-align: left;
     }
   }
 
@@ -61,11 +63,6 @@
     margin-bottom: 1.8rem;
     max-width: 580px;
     color: $color-body-text;
-    text-align: center;
-
-    @include on-laptop {
-      text-align: left;
-    }
   }
 
   &__link {
