@@ -1,0 +1,53 @@
+@import '../../styles/style_utils';
+
+.my-swiper {
+  position: relative;
+  padding-block: 2rem;
+  height: max-content;
+}
+
+.swiper-slide {
+  @include flex-center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @include size(71px);
+  @include scale;
+}
+
+
+@include on-laptop {
+  .swiper-button-prev {
+    left: 150px;
+  }
+  .swiper-button-next {
+    right: 150px;
+  }
+}
+
+.swiper-button-icon {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-text {
+  width: 100%;
+  padding-inline: 80px;
+  max-width: 760px;
+  color: $color-body-text;
+}
+
+.swiper-quote {
+  font-family: $font-family-secondary;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.swiper-author {
+  font-family: $font-family-main;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+}

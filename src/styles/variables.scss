@@ -1,0 +1,23 @@
+// Color Palette
+$color-highlight: #d48254;
+$color-title-text: #222;
+$color-ui-inactive: #eee;
+$color-body-text: #777;
+$color-btn-bg: #d4b254;
+$color-text-light: #fff;
+$color-text-secondary: #222;
+$color-footer-link: rgb(255 255 255 / 80%);
+$color-footer-overlay: rgb(0 0 0 / 90%);
+$light-bg: rgb(255 255 255 / 50%);
+
+// Typography
+$font-family-title: 'Helvetica-Bold', 'arial', sans-serif;
+$font-family-main: 'Roboto-Regular', arial, sans-serif;
+$font-family-secondary: 'HelveticaNeue', arial, sans-serif;
+
+// Spacing
+$spacing-wrapper: 1300px; // Max width of the wrapper
+$spacing-gutter: 20px;
+
+// Buttons
+$button-main-bg: $color-highlight;

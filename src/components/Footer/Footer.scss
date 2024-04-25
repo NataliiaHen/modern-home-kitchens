@@ -1,0 +1,155 @@
+@import '../../styles/style_utils';
+
+.footer {
+  position: relative;
+  background: {
+    image: url('../../images/hero1.png');
+    position: center;
+    size: cover;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: $color-footer-overlay;
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding: 40px 20px;
+    width: 100%;
+  }
+
+  &__logo {
+    @include flex-center(row);
+
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      height: 1px;
+      background-color: $light-bg;
+      flex-grow: 1;
+    }
+
+    &::before {
+      margin-right: 1rem;
+    }
+
+    &::after {
+      margin-left: 1rem;
+    }
+  }
+
+  &__columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+
+    @include on-tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    @include on-laptop {
+      gap: 65px;
+    }
+  }
+
+  &__column {
+    &-title {
+      margin-bottom: 1rem;
+      color: $color-text-light;
+      text-align: center;
+
+      @include on-tablet {
+        text-align: left;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    @include on-tablet {
+      align-items: start;
+    }
+  }
+
+  &__link {
+    @extend %nav-link;
+
+    color: $color-footer-link;
+    transition: color 300ms;
+
+    @include on-laptop {
+      &:hover {
+        color: $color-highlight;
+      }
+    }
+  }
+
+  &__socials {
+    @include flex-justify-center;
+
+    gap: 1rem;
+
+    &-item {
+      @include flex-center;
+      @include size(40px);
+
+      border-radius: 50%;
+      background-color: $color-text-light;
+      color: $color-text-light;
+      transition: background-color 300ms;
+
+      & > a {
+        @include flex-center;
+        height: 100%;
+        width: 100%;
+      }
+
+      @include on-laptop {
+        &:hover {
+          background-color: $color-highlight;
+
+          svg {
+            color: $color-text-light;
+          }
+        }
+      }
+    }
+
+    &-icon {
+      color: black;
+      @include size(20px);
+    }
+  }
+
+  &__copyright {
+    color: $light-bg;
+    text-align: center;
+
+    small {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    padding-bottom: 60px;
+    border-bottom: 1px solid $light-bg;
+  }
+
+  padding-bottom: 60px;
+}

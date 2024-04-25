@@ -1,0 +1,8 @@
+@import '../../styles/style_utils';
+
+.logo {
+  height: 32px;
+  transform: scale(1);
+
+  @include scale;
+}

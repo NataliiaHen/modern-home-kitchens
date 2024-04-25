@@ -1,0 +1,38 @@
+@import '../../styles/style_utils';
+
+.header-swiper {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.header-swiper-img-thumb {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.swiper-pagination {
+  z-index: 6;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-highlight;
+}
+
+.swiper-pagination-bullet {
+  width: 100px;
+  border-radius: 5px;
+  background-color: $color-text-light;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-highlight;
+}

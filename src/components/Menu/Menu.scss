@@ -1,0 +1,154 @@
+@import '../../styles/style_utils';
+
+.menu {
+  @include content-padding-inline;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  z-index: 90;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: content-box;
+    height: 44px;
+    padding-block: 1rem 3rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid $light-bg;
+
+    @include on-tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 12px;
+
+    &-title {
+      margin-bottom: 1rem;
+      color: white;
+      text-align: left;
+    }
+
+    &-item {
+      transform: scale(1);
+      transition: transform 300ms;
+
+      @include on-laptop {
+        &:hover {
+          transform: scale(1.3);
+
+          & .header__socials-icon {
+            color: $color-highlight;
+          }
+        }
+      }
+    }
+
+    &-icon {
+      @include size(20px);
+      color: $color-text-light;
+      transition: color 300ms;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &-item {
+      @extend %nav-link;
+      transition: color 300ms;
+
+      @include on-laptop {
+        &:hover {
+          color: $color-highlight;
+        }
+      }
+    }
+  }
+
+  &__cart-button {
+    @extend %nav-link;
+    @include flex-center(row);
+
+    gap: 14px;
+    min-width: 192px;
+    width: max-content;
+    margin: 0 auto;;
+    flex-shrink: 0;
+    background-color: transparent;
+    padding: 1rem 3rem;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    transform: scale(1);
+    transition: background-color 300ms;
+
+    @include on-laptop {
+      &:hover {
+        border-color: $color-highlight;
+        color: $color-highlight;
+
+        .header__cart-button-icon {
+          color: $color-highlight;
+        }
+      }
+    }
+
+    &-icon {
+      color: $color-text-light;
+      @include size(14px);
+    }
+  }
+
+  &__social-icon {
+    color: $color-highlight;
+  }
+
+  &-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  &-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 300ms;
+  }
+
+  &-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 300ms;
+  }
+
+  &__btn--cross {
+    @include size(16px);
+    @include scale;
+
+    & svg {
+      path {
+        align-self: center;
+        stroke: white;
+      }
+    }
+  }
+}

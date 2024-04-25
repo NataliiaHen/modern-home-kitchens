@@ -1,0 +1,63 @@
+@import './variables';
+@import './mixins';
+@import './extends';
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-family-title;
+  font-size: bold;
+  color: $color-title-text;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+
+  @include on-laptop {
+    font-size: 3.46rem;
+    line-height: 3.86rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+
+  @include on-laptop {
+    font-size: 2.8rem;
+    line-height: 3.46rem;
+  }
+}
+
+h3 {
+  font-size: 1.8rem;
+
+  @include on-laptop {
+    font-size: 2.13rem;
+    line-height: 2.8rem;
+  }
+}
+
+h4 {
+  font-size: 1.3rem;
+  
+  @include on-laptop {
+    font-size: 1.6rem;
+    line-height: 2.13rem;
+  }
+}
+
+h5 {
+  font-size: 1rem;
+
+  @include on-laptop {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+}
+
+a {
+  display: block;
+}

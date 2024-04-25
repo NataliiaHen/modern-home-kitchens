@@ -1,0 +1,18 @@
+@import './styles/style_utils';
+
+body {
+  .page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    overflow-x: hidden;
+
+    /* &__content {
+      padding-block: 50px 184px;
+      flex-grow: 3;
+      height: 100%;
+    } */
+  }
+}

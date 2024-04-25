@@ -1,0 +1,38 @@
+@import '../../styles/style_utils';
+
+.testimonials {
+  padding-block: 60px;
+  text-align: center;
+  background-color: $color-ui-inactive;
+
+  @include on-laptop {
+    padding-block: 117px;
+  }
+
+  &__header {
+    @include flex-center;
+  }
+
+  &__subtitle {
+    @extend %sub-title;
+
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    max-width: 600px;
+  }
+
+  &__bottom {
+    @include flex-center;
+
+    width: 100%;
+  }
+
+  &__button {
+    padding-inline: 30px;
+    @include btn-styles;
+
+    max-width: 419px;
+  }
+}

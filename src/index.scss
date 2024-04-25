@@ -1,0 +1,18 @@
+@import './styles/style_utils';
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-family: $font-family-main;
+  font-size: 15px;
+
+  color: $color-body-text;
+
+  body {
+    @extend %main-text;
+  }
+}

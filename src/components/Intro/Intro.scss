@@ -1,0 +1,42 @@
+@import '../../styles/style_utils';
+
+.intro {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  &__content {
+    @include flex-center;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem 0;
+    color: $color-text-light;
+    z-index: 2;
+  }
+
+  &__text {
+    @extend %sub-title;
+
+    margin-bottom: 12px;
+    color: $color-text-light;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    color: $color-text-light;
+  }
+
+  &__cta {
+    @include btn-styles;
+
+    width: 228px;
+  }
+}

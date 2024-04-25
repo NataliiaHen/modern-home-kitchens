@@ -1,0 +1,51 @@
+@import '../../styles/style_utils';
+
+.gallery {
+  &__content {
+    width: 100%;
+    @include flex-center;
+
+    gap: 2rem;
+    padding: 2rem 0;
+    padding-block: 60px;
+
+    @include on-laptop {
+      padding-block: 115px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__link {
+    @include btn-styles;
+
+    width: 185px;
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 21px;
+    width: 100%;
+  }
+
+  &__image-thumbnail {
+    grid-column: span 4;
+    height: 100%;
+    min-height: 312px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    @include on-tablet {
+      grid-column: span 2;
+    }
+
+    @include on-laptop {
+      grid-column: span 1;
+    }
+  }
+}
